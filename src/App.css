@@ -3,78 +3,143 @@
   margin: 0;
 }
 
-body{
-  background: #222;
-}
-/* ---------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width:425px) {
+
 .appContainer{
-  width: auto;
+  width: 100%;
   height: 100vh;
-  margin-left: 200px;
-  margin-right: 200px;
   background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
 }
 /* ---------------------------------------------------------------------------------------*/
+
 .appPage{
-  width: auto;
-  height: 88%;
+  width: 100%;
+  height: 90%;
 }
 .appPage_nav{
-  height: auto;
-  margin: 1px 1px 5px 1px;
+  height: 35px;
+  margin: 1px 1px 1px 1px;
 }
 .appPage_nav h3{
-  margin: 0 0 0 30px;
-  color: slateblue; 
+ margin-left: 30px;
+ margin-top: 5px;
+ color: green; 
+ font-style: italic;
 }
 .appPage_nav  button{
-  padding:6px;
-  border-radius: 50%;
-  border: none;
-  margin-top: 5px;
-  cursor: pointer;
-  color: steelblue;
+ padding: 6px;
+ margin-top: 5px;
+ border-radius: 50%;
+ border: none;
+ cursor: pointer;
 }
-.appPage_nav h3 span:first-child {
-  margin: 0 0 0 680px; 
+.appPage_nav .appPage_nav_btn1{
+   position: absolute;
+   top: 0;
+   right: 70px;
  }
-
-.appPage_nav h3 span:last-child {
- margin: 0 0 0 10px;
+ .appPage_nav .appPage_nav_btn2{
+  position: absolute;
+  top: 0;
+  right: 30px;
 }
 /* ---------------------------------------------------------------------------------------*/
+
 .appPage_route {
   width: auto;
-  height: 490px;
+  height: 425px;
   overflow: auto;
-}
+} 
 /* ---------------------------------------------------------------------------------------*/
+
 .appIcons{
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 10%;
+  display: flex;
+ justify-content: space-evenly;
 }
-.appIcons span img{
-  padding: 1px;
-  width: 50px;
-  margin-left: 40px;
-  margin-top: 5px;
-  border-radius: 10px;
-  background: whitesmoke;
-  color: rosybrown;
-  cursor: pointer;
+.appIcons img{
+ width: 35px;
+ background: whitesmoke;
+ padding: 1px;
+ margin-top: 5px;
+ border-radius: 10px;
 }
-.appIcons span:nth-child(2){
-  margin-left: 90px;
 }
-.appIcons span:nth-child(3){
-  margin-left: 90px;
-}
-.appIcons span:nth-child(4){
-  margin-left: 90px;
-}
-.appIcons span:nth-child(5){
-  margin-left: 90px;
-}
+
 /* ---------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width:2600px) and (min-width:426px) {
+ 
+  .appContainer{
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+ /* ---------------------------------------------------------------------------------------*/
+
+  .appPage{
+    width: 100%;
+    height: 90%;
+    
+  }
+  .appPage_nav{
+    height: 35px;
+    margin: 1px 1px 1px 1px;
+   
+  }
+  .appPage_nav h3{
+    margin-left: 30px;
+    margin-top: 5px;
+    color: green; 
+    font-style: italic;
+   }
+   .appPage_nav  button{
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+   }
+   .appPage_nav .appPage_nav_btn1{
+    position: absolute;
+    top: 0;
+    right: 15%;
+  }
+  .appPage_nav .appPage_nav_btn2{
+    position: absolute;
+    top: 0;
+    right: 25%;
+  }
+
+  .appPage_route {
+    width: auto;
+    height: 92%;
+    overflow: auto;
+  } 
+
+ /* ---------------------------------------------------------------------------------------*/
+  
+  .appIcons{
+    width: 100%;
+    height: 10%;
+    display: flex;
+   justify-content: space-evenly;
+  }
+  .appIcons img{
+   width: 35px;
+   background: whitesmoke;
+   padding: 1px;
+   margin-top: 5px;
+   border-radius: 10px;
+  }
+}
