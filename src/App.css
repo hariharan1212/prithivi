@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: #222;
 }
+/* ---------------------------------------------------------------------------------------*/
+.appContainer{
+  width: auto;
+  height: 100vh;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* ---------------------------------------------------------------------------------------*/
+.appPage{
+  width: auto;
+  height: 88%;
+}
+.appPage_nav{
+  height: auto;
+  margin: 1px 1px 5px 1px;
+}
+.appPage_nav h3{
+  margin: 0 0 0 30px;
+  color: slateblue; 
+}
+.appPage_nav  button{
+  padding:6px;
+  border-radius: 50%;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+  color: steelblue;
+}
+.appPage_nav h3 span:first-child {
+  margin: 0 0 0 680px; 
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.appPage_nav h3 span:last-child {
+ margin: 0 0 0 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ---------------------------------------------------------------------------------------*/
+.appPage_route {
+  width: auto;
+  height: 490px;
+  overflow: auto;
 }
-
-.App-link {
-  color: #61dafb;
+/* ---------------------------------------------------------------------------------------*/
+.appIcons{
+  width: auto;
+  height: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.appIcons span img{
+  padding: 1px;
+  width: 50px;
+  margin-left: 40px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: whitesmoke;
+  color: rosybrown;
+  cursor: pointer;
 }
+.appIcons span:nth-child(2){
+  margin-left: 90px;
+}
+.appIcons span:nth-child(3){
+  margin-left: 90px;
+}
+.appIcons span:nth-child(4){
+  margin-left: 90px;
+}
+.appIcons span:nth-child(5){
+  margin-left: 90px;
+}
+/* ---------------------------------------------------------------------------------------*/
