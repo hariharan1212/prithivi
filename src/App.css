@@ -110,12 +110,12 @@
    .appPage_nav .appPage_nav_btn1{
     position: absolute;
     top: 0;
-    right: 15%;
+    right: 25%;
   }
   .appPage_nav .appPage_nav_btn2{
     position: absolute;
     top: 0;
-    right: 25%;
+    right: 15%;
   }
 
   .appPage_route {

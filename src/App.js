@@ -1,5 +1,5 @@
 import './App.css';
-import {GrAdd} from "react-icons/gr";
+import "./stylesheets/addicon.css"
 import {GrNotification} from "react-icons/gr";
 import {Routes,Route,Link} from  "react-router-dom"
 import Home from './components/home';
@@ -7,6 +7,7 @@ import Chat from './components/chat';
 import Searchclint from './components/searchclint';
 import Navigation from './components/navigation';
 import Profile from './components/profile';
+import AddIcon from './components/addicon';
 
 
 
@@ -17,7 +18,7 @@ export default function App() {
       <div className="appPage">
         <div className="appPage_nav">
              <span><img src="./images/flim_hook_logo.png" alt="" /></span>
-             <span className="appPage_nav_btn1"><button><GrAdd/></button></span>
+             <span><AddIcon/></span>
              <span className="appPage_nav_btn2"><button><GrNotification/></button></span>
         </div> 
        
