@@ -1,5 +1,6 @@
 import './App.css';
-import "./stylesheets/addicon.css"
+import "./stylesheets/addicon.css";
+import "./stylesheets/profile.css";
 import {GrNotification} from "react-icons/gr";
 import {Routes,Route,Link} from  "react-router-dom"
 import Home from './components/home';
