@@ -34,11 +34,11 @@ export default function App() {
        </div> 
 
        <div className="appIcons">
-          <Link to={"/"} ><img src="./images/home.png" alt='' /></Link> 
-          <Link to={"/chat"}><img src="./images/chat.png" alt=''/></Link> 
-          <Link to={"/searchclint"}><img src="./images/personSearch.png" alt=''/></Link> 
-          <Link to={"/navigation"}><img src="./images/navigation.jpg" alt=''/></Link> 
-          <Link to={"/profile"}><img src="./images/userprofile.png" alt=''/></Link> 
+          <Link to={"/"} ><button><img src="./images/home.png" alt='' /></button></Link> 
+          <Link to={"/chat"}><button><img src="./images/chat.png" alt=''/></button></Link> 
+          <Link to={"/searchclint"}><button><img src="./images/personSearch.png" alt=''/></button></Link> 
+          <Link to={"/navigation"}><button><img src="./images/navigation.jpg" alt=''/></button></Link> 
+          <Link to={"/profile"}><button><img src="./images/userprofile.png" alt=''/></button></Link> 
       </div>
     </div>
     </>
