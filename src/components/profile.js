@@ -1,7 +1,9 @@
 import React from 'react';
 
 export default function Profile (){
-    
+     const handle_edit=()=>{
+        console.log("edited");
+     }
     return(
         <>
        <div className='container'>
@@ -13,7 +15,7 @@ export default function Profile (){
          <div className='container_profile_part1'>
 
             <div className='profile_headder'>
-
+                
                             <div className='profile_pic'>
                                 <img src='./images/thalaivar_profile.jpeg' alt=''/>
                             </div>
@@ -24,10 +26,10 @@ export default function Profile (){
                                     <h6>Actor</h6>
                                     <h6>Producer</h6>
                                     <div>
-                                    <img src='./images/Editpage_icon.png' alt='' width={"30px"} height={"30px"} />
+                                    <button onClick={handle_edit}><img src='./images/Editpage_icon.png' alt='' width={"30px"} height={"30px"} />
+                                    </button>
                                     </div>
                     </div>
-           
             </div>
             <div className='profile_name'>
                 <h4>Rajnikanth(Thalaivar)</h4> 

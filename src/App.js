@@ -11,8 +11,8 @@ import Profile from './components/profile';
 import AddIcon from './components/addicon';
 
 
-
 export default function App() {
+  
   return (
     <>
     <div className="appContainer">
@@ -29,7 +29,7 @@ export default function App() {
                     <Route path="/chat" element={<Chat/>}/>
                     <Route path="/searchclint" element={<Searchclint/>}/>
                     <Route path="/navigation" element={<Navigation/>}/>
-                    <Route path="/profile" element={<Profile/>} />
+                    <Route path="/profile" element={<Profile />} />
               </Routes>
         </div>
        </div> 
@@ -39,7 +39,7 @@ export default function App() {
           <Link to={"/chat"}><button><img src="./images/chat.png" alt=''/></button></Link> 
           <Link to={"/searchclint"}><button><img src="./images/personSearch.png" alt=''/></button></Link> 
           <Link to={"/navigation"}><button><img src="./images/navigation.jpg" alt=''/></button></Link> 
-          <Link to={"/profile"}><button><img src="./images/userprofile.png" alt=''/></button></Link> 
+          <Link to={"/profile"} ><button><img src="./images/userprofile.png" alt='' /></button></Link> 
       </div>
     </div>
     </>
