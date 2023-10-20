@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import "./stylesheets/addicon.css";
 import "./stylesheets/profile.css";

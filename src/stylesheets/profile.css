@@ -64,12 +64,6 @@
     width: 50px;
     height: 20px;
 }
-
-/* .profile_desigination img:nth-child(2){
-    width: 50px;
-    height: 20px;
-} */
-
 .profile_name{
     width: 55%;
     height: auto;
@@ -79,35 +73,31 @@
     font-size: 12px;
 }
 .profile_name img{
-    width: 20px;
-    height: 20px;
-    padding: 3px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid red;
 }
 
-.profile_name p input{
+.profile_name ul li input{
     /* border: none;
     outline: none; */
-    width: 100px;
-    font-size: 12px;
-    padding: 2px;
+    width: auto;
+    margin-left: 15px;
 }
-/* input[type='date']::-webkit-calendar-picker-indicator{
-   
-} */
+
+.profile_name ul li input::placeholder{
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+
 .profile_name p:nth-child(8){
     display: flex;
 }
 
-/* .profile_name input:nth-child(6){
-   
-}
-
-.profile_name input:nth-child(7){
-   
- } */
-
 
  /* ------------------------------------------------------ */
+
  .container_profile_part2{
     padding: 10px;
  }
@@ -126,6 +116,10 @@
     width:100px;
     margin-top: -10px;
  }
+ .container_profile_part2_1 div input::placeholder{
+    font-size: 11px;
+    opacity: 0.9;
+}
  .container_profile_part2_2 img{
     width: 25px;
     height: 25px;
@@ -147,12 +141,16 @@
     font-size: 13px;
  }
  .container_profile_part3 input{
-    width: 120px;
-    margin-right: 30px;
+    width: auto;
     float: right; 
     border: none;
     outline: none;
  }
+
+ .container_profile_part3 input::placeholder{
+    font-size: 11px;
+    opacity: 0.9;
+}
 
  .container_profile_part4{
     padding: 10px;
@@ -162,10 +160,13 @@
     padding: 5px;
  }
  .container_profile_part4 input{
-    width: 120px;
-    margin-right: 30px;
+    width: auto;
     float: right;
     border: none;
     outline: none;
  }
+ .container_profile_part4 input::placeholder{
+    font-size: 11px;
+    opacity: 0.9;
+}
 
