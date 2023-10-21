@@ -159,14 +159,19 @@
     font-size: 13px;
     padding: 5px;
  }
- .container_profile_part4 input{
+ .container_profile_part4_input{
     width: auto;
     float: right;
     border: none;
     outline: none;
+    visibility: hidden;
  }
  .container_profile_part4 input::placeholder{
     font-size: 11px;
     opacity: 0.9;
+}
+/* ////////////////////////////////////////////////// */
+.container_profile_part4_input_add{
+    visibility: visible;
 }
 

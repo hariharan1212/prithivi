@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React,{useState} from 'react';
 
 export default function Profile (){
 
-    const [data,Setdata]=useState("")
+     const [isActive, setActive]=useState(true)
       
-     const handle_Change=(e)=>{
-        Setdata(console.log(e.target.value)) 
-     }
+    
      const handle_edit=()=>{
-        // const handle_Change=(e)=>{
-        //     Setdata(console.log(e.target.value)) 
-        //  }
-      
+       console.log("clicked");
+       
      }
+
     return(
         <>
        <div className='container'>
@@ -44,8 +41,8 @@ export default function Profile (){
                 <h4>Rajnikanth(Thalaivar)</h4> 
                 <p>7.9M Follwers || 100 Following</p>
             <ul>
-                <li><span><img src='./images/dob_icon.png' alt=''/></span><input type='text' placeholder='Enter Your Date Of Birth' /></li>
-                <li><span><img src='./images/birthplace_icon.png' alt=''/></span><input type='text' placeholder='Enter Your Birth Place' onChange={(e)=>handle_Change(e)}/></li>
+                <li><span><img src='./images/dob_icon.png' alt=''/><input type='text' placeholder='Enter Your Date Of Birth' /></span></li>
+                <li><span><img src='./images/birthplace_icon.png' alt=''/></span><input type='text' placeholder='Enter Your Birth Place' /></li>
                 <li><span><img src='./images/Shooting_location_spot.png' alt=''/></span> <input type='text' placeholder='Enter Your Shooting Spot Location'/></li>
                 <li><span><img src='./images/flag.png' alt=''/></span> <input type='text' placeholder='Enter Your Nationality'/></li>
                 <li><span><img src='./images/Cash_icon.png' alt=''/></span><input type='text' placeholder='Enter Your Salery Details'/></li>
@@ -106,7 +103,7 @@ export default function Profile (){
          <div>
             <h4>Education</h4>
             <div>
-                    <p>School : <span><input type='type' placeholder='Enter Your School Name'/></span></p>
+                    <p>School : <span><input type='type' placeholder='Enter Your School Name' className={isActive ? "container_profile_part4_input" : "container_profile_part4_input_add"}/></span></p>
                     <p>Highest : <span><input type='type' placeholder='Enter Your Higher Studies'/></span></p>
                     <p>Qualification : <span><input type='type' placeholder='Enter Your Qualification'/></span></p>
             </div>
