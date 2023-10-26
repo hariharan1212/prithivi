@@ -1,5 +1,5 @@
 .cover_pic{
-    width: 95%;
+    width: 94%;
     height: 200px;
     margin: 0 7px 0 7px;
 }
@@ -68,28 +68,39 @@
     width: 55%;
     height: auto;
 }
+.profile_name div{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 8px 0 15px 10px;
+}
+/* .profile_name div:first-child{
+    margin-top: 10px;
+} */
  .profile_name p{
     padding: 5px;
     font-size: 12px;
 }
 .profile_name img{
-    width: 15px;
+    width: 16px;
     height: 15px;
-    border: 1px solid red;
+    padding: 1px;
+    margin-left: -6px;
+}
+.profile_name div input{
+    border: none;
+    outline: none;
+    float: right;
+    margin: 0px 0 5px 2px;
 }
 
-.profile_name ul li input{
-    /* border: none;
-    outline: none; */
-    width: auto;
-    margin-left: 15px;
-}
 
-.profile_name ul li input::placeholder{
+.profile_name div input::placeholder{
     font-size: 11px;
     opacity: 0.9;
 }
-
+.profile_name div input:disabled{
+    background-color: white;
+}
 
 .profile_name p:nth-child(8){
     display: flex;
@@ -124,6 +135,9 @@
     width: 25px;
     height: 25px;
  }
+ .container_profile_part2 input:disabled{
+    background-color: white;
+}
  .container_profile_part2_2 div:nth-child(2){
     display:inline-grid;
     grid-template-columns: auto auto auto;
@@ -151,6 +165,9 @@
     font-size: 11px;
     opacity: 0.9;
 }
+.container_profile_part3 input:disabled{
+    background-color: white;
+}
 
  .container_profile_part4{
     padding: 10px;
@@ -159,19 +176,23 @@
     font-size: 13px;
     padding: 5px;
  }
- .container_profile_part4_input{
+ .container_profile_part4 input{
     width: auto;
     float: right;
-    border: none;
-    outline: none;
-    visibility: hidden;
+    /* border: none;
+    outline: none; */
  }
  .container_profile_part4 input::placeholder{
     font-size: 11px;
     opacity: 0.9;
 }
-/* ////////////////////////////////////////////////// */
-.container_profile_part4_input_add{
-    visibility: visible;
+.container_profile_part4 input:disabled{
+    background-color: white;
 }
+/* .container_profile_part4 input focus{
+    border:  1px solid black;
+} */
+
+/* ////////////////////////////////////////////////// */
+
 

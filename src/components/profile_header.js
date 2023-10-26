@@ -1,0 +1,415 @@
+import React, { useState } from 'react'
+import  {Row,Col,Button,Modal,Form, Card,Dropdown,SplitButton,InputGroup}  from 'react-bootstrap'
+
+
+export default function ProfileHeader() { 
+    const [show,setShow]=useState(false);
+    const [show1,setShow1]=useState(false);
+    const [show2,setShow2]=useState(false);
+    const [show3,setShow3]=useState(false);
+    const [show4,setShow4]=useState(false);
+    
+  return (
+    <>
+    <div >
+        <Row>
+        <div className='cover_pic'>
+            <img src='./images/cover_pic.jpeg' alt=''/>
+        </div>
+        </Row>
+        {/* ....................... */}
+        <Row>
+        <Col xs={5}>
+        <Row>
+        <div className='profile_pic'>
+            <img src='./images/thalaivar_profile.jpeg' alt=''/>
+        </div>
+        </Row>
+        <Row style={{margin:"5px 0 0 10px", boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
+            <p style={{fontSize:"13px",marginLeft:"20px"}}>Profession <br/><Button variant="outline-info" onClick={()=>setShow(true)}>+</Button></p>
+            <Modal show={show} onHide={()=>setShow(false)}>
+            <Modal.Header closeButton>
+                    <Modal.Title>Profession</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group className='mb-3'>
+                            {/* <Form.Select as='textarea' aria-label="Default select example">
+                             <option>Enter Profession</option>
+                             <option value="1">One</option>
+                             <option value="2">Two</option>
+                            <option value="3">Three</option>
+                           </Form.Select> */}
+                          
+                            {/* <Form.Control
+                            type='text'
+                            placeholder='Enter Profession'
+                            ></Form.Control> */}
+
+                           <InputGroup>
+                        <Form.Control as="textarea" aria-label="With textarea" placeholder='Enter Profession'/>
+                           </InputGroup>
+                         </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={()=>setShow(false)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={()=>setShow(false)}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </Row>
+        </Col>
+        {/* ------------------------------------------------------------------------- */}
+        <Col xs={6}>
+            <Row>
+                <h5>Rajnikanth</h5>
+                <p style={{fontSize:"10px"}}>57M Follwers || 45 Followings</p>
+            </Row>
+        <Row style={{margin:"5px 0 15px 5px",boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
+        <p style={{fontSize:"13px"}}>General Details <Button variant="outline-info" onClick={()=>setShow1(true)}>+</Button></p>
+             <Modal show={show1} onHide={()=>setShow1(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>General Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group className='mb-2'>
+                            <Form.Label>Date Of Birth</Form.Label>
+                            <Form.Control
+                            type='date'
+                            placeholder='00/00/000'
+                            ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className='mb-2'>
+                            <Form.Label>Birth Location</Form.Label>
+                            <Form.Control
+                            type='text'
+                            placeholder='Birth Location'
+                            ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className='mb-2'>
+                            <Form.Label>Current Location</Form.Label>
+                            <Form.Control
+                            type='text'
+                            placeholder='Current Location'
+                            ></Form.Control>
+                        </Form.Group>
+                  <Form.Group className='mb-2'>
+                            <Form.Label>Nationality</Form.Label>
+                            <Form.Control
+                            type='text'
+                            placeholder='Nationality'
+                            ></Form.Control>
+                </Form.Group>
+                <Form.Group className='mb-2'>
+                <Form.Label>Salery</Form.Label> <br/>
+                <InputGroup className="mb-3">
+                              <SplitButton
+                                variant="outline-secondary"
+                                title="select"
+                                id="segmented-button-dropdown-1"
+                                >
+                                <Dropdown.Item >Inr</Dropdown.Item>
+                                <Dropdown.Item >USD</Dropdown.Item>
+                                <Dropdown.Item >Euro</Dropdown.Item>
+                                </SplitButton>
+                            <Form.Control
+                            type='number'
+                            placeholder='Salery'
+                            ></Form.Control>
+                            </InputGroup>
+                </Form.Group>
+                <Form.Group className='mb-2'>
+                            <Form.Label>Years Of Experience</Form.Label>
+                            <Form.Control
+                            type='number'
+                            min={1}
+                            placeholder='Years Of Experience'
+                            ></Form.Control>
+                </Form.Group>
+                <Form.Group className='mb-2'>
+                            <Form.Label>Total Number Of Movies</Form.Label>
+                            <Form.Control
+                            type='number'
+                            placeholder='Total Number Of Movies'
+                            ></Form.Control>
+                </Form.Group>
+                <Form.Group className='mb-2'>
+                            <Form.Label>Availability</Form.Label>
+                            <Form.Control
+                            type='date'
+                            placeholder='Availability'
+                            ></Form.Control>
+                </Form.Group>
+                </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={()=>setShow1(false)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={()=>setShow1(false)}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+             </Modal>
+        </Row>
+        
+        {/* ---------------------------------------------------------------- */}
+        <Row style={{margin:"5px 0 15px 5px",boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
+           <p style={{fontSize:"13px"}}>Body Measurements<Button variant="outline-info" onClick={()=>setShow2(true)}>+</Button></p>
+            <Modal show={show2} onHide={()=>setShow2(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                    Body Measurements
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Height</Form.Label>
+                        <Form.Select as='textarea'>
+                             <option>Enter Height</option>
+                             <option value="1">1-2 feet</option>
+                             <option value="2">2-3 feet</option>
+                            <option value="3">3-4 feet</option>
+                            <option value="4">4-5 feet</option>
+                            <option value="5">5-6 feet</option>
+                            <option value="6">6-7 feet</option>
+                            <option value="7">7-8 feet</option>
+                            <option value="8">8-9 feet</option>
+                            <option value="9">9-10 feet</option>
+                        </Form.Select>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Weight</Form.Label>
+                        <Form.Control
+                        type='Number'
+                        placeholder='Weight'
+                        min={"1"}
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Skin Tone</Form.Label>
+                        <Form.Select as='textarea' >
+                             <option>Enter SkinTone</option>
+                             <option value="1">---</option>
+                             <option value="2">---</option>
+                            <option value="3">---</option>
+                            <option value="4">---</option>
+                            <option value="5">---</option>
+                            <option value="6">---</option>
+                            <option value="7">---</option>
+                            <option value="8">---</option>
+                            <option value="9">---</option>
+                        </Form.Select>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Eye Color</Form.Label>
+                        <Form.Select as='textarea' >
+                             <option>Enter EyeColor</option>
+                             <option value="1">Amber</option>
+                             <option value="2">Blue</option>
+                            <option value="3">Brown</option>
+                            <option value="4">Gray</option>
+                            <option value="5">Green</option>
+                            <option value="6">Hazel</option>
+                            <option value="7">Red</option>
+                        </Form.Select>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Chest</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Chest'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Waist</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Waist'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Biceps</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Biceps'
+                        ></Form.Control>
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                   <Button variant="secondary" onClick={()=>setShow2(false)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={()=>setShow2(false)}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer> 
+            </Modal>
+        </Row>
+        
+        {/* ------------------------------------------------------------------------------------ */}
+        <Row style={{margin:"5px 0 15px 5px",boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
+           <p style={{fontSize:"13px"}}>Personal Information<Button variant="outline-info" onClick={()=>setShow3(true)}>+</Button></p>
+            <Modal show={show3} onHide={()=>setShow3(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                    Personal Information
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Religion</Form.Label>
+                        <Form.Select as='textarea' type='text' >
+                             <option>Marital Status</option>
+                             <option value="1">Hindu</option>
+                             <option value="2">Muslim</option>
+                            <option value="3">Christian</option>
+                            <option value="4">Buddhist</option>
+                            <option value="5">Sikh</option>
+                            <option value="6">Others</option>
+                        </Form.Select>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Caste</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Caste'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Marital Status</Form.Label>
+                        <Form.Select as='textarea' type='text' >
+                             <option>Marital Status</option>
+                             <option value="1">Single</option>
+                             <option value="2">Married</option>
+                            <option value="3">Widowed</option>
+                            <option value="4">Divorced</option>
+                            <option value="5">Seperated</option>
+                        </Form.Select>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Affairs</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Affairs'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Marrriage Date</Form.Label>
+                        <Form.Control
+                        type='date'
+                        placeholder='Marriage Date'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Spouse</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Spouse'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>children</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Children'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Father</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Father'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Mother</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Mother'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Siblings</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Siblings'
+                        ></Form.Control>
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                   <Button variant="secondary" onClick={()=>setShow3(false)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={()=>setShow3(false)}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </Row>
+      
+        {/* -------------------------------------------------------------------------- */}
+        <Row style={{margin:"5px 0 15px 5px",boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
+           <p style={{fontSize:"13px"}}>Educational Information<Button variant="outline-info" onClick={()=>setShow4(true)}>+</Button></p>
+            <Modal show={show4} onHide={()=>setShow4(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                    Educational Information
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group className="mb-3">
+                        <Form.Label>School</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='School'
+                        ></Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                        <Form.Label>Highest Qualification</Form.Label>
+                        <Form.Control
+                        type='text'
+                        placeholder='Highest Qualifiction'
+                        ></Form.Control>
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                   <Button variant="secondary" onClick={()=>setShow4(false)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={()=>setShow4(false)}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </Row>
+        </Col>
+        </Row>
+        <hr/>
+        <Row>
+            <h5>Projects :</h5>
+            <div>
+                <Card style={{ width: '50px' ,height:"50px" }}>
+                    <Card.Img variant='top' src='./images/thalaivar_profile.jpeg'/>
+                    <p>text</p>
+                </Card>
+            </div>
+        </Row>
+         
+      {/* ....................... */}
+    </div>
+   
+    </>
+  )
+}

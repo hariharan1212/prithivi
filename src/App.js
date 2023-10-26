@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
 import "./stylesheets/addicon.css";
-import "./stylesheets/profile.css";
+import "./stylesheets/profile_headder.css";
 import {GrNotification} from "react-icons/gr";
 import {Routes,Route,Link} from  "react-router-dom"
 import Home from './components/home';
 import Chat from './components/chat';
 import Searchclint from './components/searchclint';
 import Navigation from './components/navigation';
-import Profile from './components/profile';
+//import Profile from './components/profile';
 import AddIcon from './components/addicon';
+import ProfileHeader from './components/profile_header';
 
 
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
       <div className="appPage">
         <div className="appPage_nav">
              <span><img src="./images/flim_hook_logo.png" alt="" /></span>
-             <span><AddIcon/></span>
+             <span className="appPage_nav_btn1"><AddIcon/></span>
              <span className="appPage_nav_btn2"><button><GrNotification/></button></span>
         </div> 
        
@@ -30,7 +31,7 @@ export default function App() {
                     <Route path="/chat" element={<Chat/>}/>
                     <Route path="/searchclint" element={<Searchclint/>}/>
                     <Route path="/navigation" element={<Navigation/>}/>
-                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/profile" element={<ProfileHeader />} />
               </Routes>
         </div>
        </div> 
