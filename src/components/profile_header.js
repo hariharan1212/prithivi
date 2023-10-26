@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import  {Row,Col,Button,Modal,Form, Card,Dropdown,SplitButton,InputGroup}  from 'react-bootstrap'
-
+import  {Row,Col,Button,Modal,Form,Card,Dropdown,SplitButton,InputGroup}  from 'react-bootstrap'
+import Profession from './profile_Headder/profession';
+import GeneralDetails from './profile_Headder/generalDetails';
 
 export default function ProfileHeader() { 
-    const [show,setShow]=useState(false);
-    const [show1,setShow1]=useState(false);
+    // const [show1,setShow1]=useState(false);
     const [show2,setShow2]=useState(false);
     const [show3,setShow3]=useState(false);
     const [show4,setShow4]=useState(false);
     
+   
   return (
     <>
     <div >
@@ -26,136 +27,17 @@ export default function ProfileHeader() {
         </div>
         </Row>
         <Row style={{margin:"5px 0 0 10px", boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
-            <p style={{fontSize:"13px",marginLeft:"20px"}}>Profession <br/><Button variant="outline-info" onClick={()=>setShow(true)}>+</Button></p>
-            <Modal show={show} onHide={()=>setShow(false)}>
-            <Modal.Header closeButton>
-                    <Modal.Title>Profession</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form>
-                        <Form.Group className='mb-3'>
-                            {/* <Form.Select as='textarea' aria-label="Default select example">
-                             <option>Enter Profession</option>
-                             <option value="1">One</option>
-                             <option value="2">Two</option>
-                            <option value="3">Three</option>
-                           </Form.Select> */}
-                          
-                            {/* <Form.Control
-                            type='text'
-                            placeholder='Enter Profession'
-                            ></Form.Control> */}
-
-                           <InputGroup>
-                        <Form.Control as="textarea" aria-label="With textarea" placeholder='Enter Profession'/>
-                           </InputGroup>
-                         </Form.Group>
-                    </Form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={()=>setShow(false)}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={()=>setShow(false)}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            <Profession/>
         </Row>
         </Col>
         {/* ------------------------------------------------------------------------- */}
         <Col xs={6}>
             <Row>
-                <h5>Rajnikanth</h5>
+                <h5>R Rajnikanth</h5>
                 <p style={{fontSize:"10px"}}>57M Follwers || 45 Followings</p>
             </Row>
         <Row style={{margin:"5px 0 15px 5px",boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
-        <p style={{fontSize:"13px"}}>General Details <Button variant="outline-info" onClick={()=>setShow1(true)}>+</Button></p>
-             <Modal show={show1} onHide={()=>setShow1(false)}>
-                <Modal.Header closeButton>
-                    <Modal.Title>General Details</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form>
-                        <Form.Group className='mb-2'>
-                            <Form.Label>Date Of Birth</Form.Label>
-                            <Form.Control
-                            type='date'
-                            placeholder='00/00/000'
-                            ></Form.Control>
-                        </Form.Group>
-                        <Form.Group className='mb-2'>
-                            <Form.Label>Birth Location</Form.Label>
-                            <Form.Control
-                            type='text'
-                            placeholder='Birth Location'
-                            ></Form.Control>
-                        </Form.Group>
-                        <Form.Group className='mb-2'>
-                            <Form.Label>Current Location</Form.Label>
-                            <Form.Control
-                            type='text'
-                            placeholder='Current Location'
-                            ></Form.Control>
-                        </Form.Group>
-                  <Form.Group className='mb-2'>
-                            <Form.Label>Nationality</Form.Label>
-                            <Form.Control
-                            type='text'
-                            placeholder='Nationality'
-                            ></Form.Control>
-                </Form.Group>
-                <Form.Group className='mb-2'>
-                <Form.Label>Salery</Form.Label> <br/>
-                <InputGroup className="mb-3">
-                              <SplitButton
-                                variant="outline-secondary"
-                                title="select"
-                                id="segmented-button-dropdown-1"
-                                >
-                                <Dropdown.Item >Inr</Dropdown.Item>
-                                <Dropdown.Item >USD</Dropdown.Item>
-                                <Dropdown.Item >Euro</Dropdown.Item>
-                                </SplitButton>
-                            <Form.Control
-                            type='number'
-                            placeholder='Salery'
-                            ></Form.Control>
-                            </InputGroup>
-                </Form.Group>
-                <Form.Group className='mb-2'>
-                            <Form.Label>Years Of Experience</Form.Label>
-                            <Form.Control
-                            type='number'
-                            min={1}
-                            placeholder='Years Of Experience'
-                            ></Form.Control>
-                </Form.Group>
-                <Form.Group className='mb-2'>
-                            <Form.Label>Total Number Of Movies</Form.Label>
-                            <Form.Control
-                            type='number'
-                            placeholder='Total Number Of Movies'
-                            ></Form.Control>
-                </Form.Group>
-                <Form.Group className='mb-2'>
-                            <Form.Label>Availability</Form.Label>
-                            <Form.Control
-                            type='date'
-                            placeholder='Availability'
-                            ></Form.Control>
-                </Form.Group>
-                </Form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={()=>setShow1(false)}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={()=>setShow1(false)}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
-             </Modal>
+            <GeneralDetails/>
         </Row>
         
         {/* ---------------------------------------------------------------- */}

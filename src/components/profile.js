@@ -38,7 +38,7 @@ export default function Profile (){
                     </div>
             </div>
             <div className='profile_name'>
-                <h4>Rajnikanth(Thalaivar)</h4> 
+                <h4>R.Rajnikanth(Thalaivar)</h4> 
                 <p>7.9M Follwers || 100 Following</p>
                 <div ><img src='./images/dob_icon.png' alt=''/><input type='text' placeholder='Enter Your Date Of Birth' disabled={disable}/></div>
                <div><img src='./images/birthplace_icon.png' alt=''/><input type='text' placeholder='Enter Your Birth Place' disabled={disable}/></div>

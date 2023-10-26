@@ -1,0 +1,557 @@
+.appPage_route {
+    width: auto;
+    height: 93%;
+    overflow: auto;
+  } 
+  .profilep {
+    width: 99%;
+    max-height: 31%;
+    min-height: 20%;
+    overflow: auto;
+    justify-content: space-evenly;
+    border-top: 2px solid blue;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    border-radius: 5px;
+  }
+  .propro{
+    display:flex;
+    overflow: auto;
+    justify-content: space-evenly;
+  }
+  .profilep .pro{
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 50px;
+    
+  }
+  .profilep .pro img{
+    width: 40px;
+    background-color: white;
+    padding: 2px 2px;
+    margin-top: 15px;
+    border-radius: 10px;
+   }
+
+.profilep .pics {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 60px;
+    height: fit-content;
+  }
+  .profilep .pics img{
+    width: 40px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+   margin-top: 15px;
+    border-radius: 5px;
+   }
+    .input{
+        width:800px;
+        height: -60%;
+        background-color: white;
+        padding:2px 2px ;
+        box-shadow: rgb(41, 41, 41);
+        margin-top: 12px;
+        border-radius: 10px;
+   }
+   .profilep p{
+    margin-left: 3%;
+   }
+   
+
+   .profilep .wrap {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 70px;
+    margin-left: -10%;
+
+  }
+  .profilep .wrap img{
+    width: 60px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 10px;
+    margin-bottom: -20%;
+    border-radius: 5px;
+   }
+   .profilep .wrap1 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 70px;
+   
+
+  }
+  .profilep .wrap1 img{
+    width: 65px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 5px;
+    margin-bottom: -30%;
+    border-radius: 5px;
+   }
+   .profilep .wrap2 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 70px;
+  }
+  .profilep .wrap2 img{
+    width: 45px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 17px;
+    margin-bottom: -5%;
+    border-radius: 5px;
+   }
+   .profilep .wrap3 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 70px;
+    margin-right: -10%;
+  }
+  .profilep .wrap3 img{
+    width: 43px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 30px;
+    margin-bottom: -5%;
+    border-radius: 5px;
+   }
+  .pppp{
+    background-color: white;
+    display: flex;
+    overflow: auto;
+    justify-content: space-evenly;
+  }
+  
+  .pp{
+    background-color: rgb(198, 198, 198);
+    background-blend-mode: color;
+    color: rgb(198, 198, 198);
+    width: 99.3%;
+  }
+  .pro2 {
+    width: 99%;
+    max-height: 31%;
+    min-height: 20%;
+    overflow: auto;
+    justify-content: space-evenly;
+    border-top: 2px solid rgb(184, 184, 184);
+    border-left: 1px solid rgb(184, 184, 184);
+    border-right: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+  }
+  .propro2{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow: auto;
+    justify-content: space-between;
+    flex-direction:row;
+    align-items: center;
+  }
+  .propro2::-webkit-scrollbar{
+    display: none;
+
+  }
+  .pro2 .pro{
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 70px;
+    
+  }
+  .pro2 .pro img{
+    width: 40px;
+    background-color: white;
+    padding: 2px 2px;
+    margin-top: 15px;
+    margin-left: -25%;
+    border-radius: 10px;
+   }
+
+.pro2 .pics1 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 90px;
+    height: fit-content;
+  }
+  .pro2 .pics1 img{
+    width: 90px;
+    height: 120px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: -20px;
+    margin-top: 15px;
+    border-radius: 10px;
+   }
+   
+   .pro2 p{
+    margin-left: 3%;
+   } 
+   .pro2 .pics2 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 90px;
+    height: fit-content;
+  }
+  .pro2 .pics2 img{
+    width: 90px;
+    height: 120px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 13px;
+    border-radius: 10px;
+   }
+   
+   .pro2 .pics3 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 90px;
+    height: fit-content;
+  }
+  .pro2 .pics3 img{
+    width: 80px;
+    height: 120px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+   }
+   
+   .pro2 .pics4 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 90px;
+    height: fit-content;
+  }
+  .pro2 .pics4 img{
+    width: 90px;
+    height: 120px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+   }
+   
+   .pro2 .pics5 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 90px;
+    height: fit-content;
+  }
+  .pro2 .pics5 img{
+    width: 90px;
+    height: 120px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+   }
+   
+   .pro2 .pics6 {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 90px;
+    height: fit-content;
+  }
+  .pro2 .pics6 img{
+    width: 90px;
+    height: 120px;
+    background-color: white;
+    padding: 1px 2px 2px 1px;
+    margin-inline-start: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+   }
+  .profile2 {
+    width: 99%;
+    display:flex;
+    /* align-items: center; */
+    overflow: auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.profile2 .post{
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  padding: 1px 2px 2px 1px;
+  margin: 0px 0px 15px 0px;
+  border: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+  
+}
+.profile2 .post img{
+    width:99%;
+    height:300px;
+    margin: 0px 0px 15px 0px;
+    border-radius: 3%;
+}
+
+/*.............................................................................................*/
+
+@media only screen and (max-width:400px){
+.profile2 .pro1{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow:auto;
+  justify-content: center;
+}
+.profile2 .pro1 .pro2 {
+  display: flex;
+  border: none;
+  outline: none;
+  width: 30px;
+  height: auto;
+  justify-content: center;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 10px;
+ }
+ .profile2 .pro1 .pro2 img{
+  width: 30px;
+  height: 30px;
+ }
+ .profile2 .pro1 .pro3 {
+  border: none;
+  outline: none;
+  width: 30px;
+  height: auto;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 16%;
+  border-radius: 10px;
+ }
+ .profile2 .pro1 .pro3 img{
+  width: 30px;
+  height: 30px;
+ }
+ .profile2 .pro1 .post{
+  align-items: center;
+ }
+ .profile2 .pro1 .like {
+  display: flex;
+  border: none;
+  outline: auto;
+  width: 72px;
+  height: 25px;
+  justify-content: center;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.profile2 .pro1 .like img {
+margin-top: 5px;
+width: 15px;
+height:15px;
+}
+.profile2 .pro1 .loc {
+display: flex;
+width: 400px;
+height: auto;
+justify-content: center;
+background-color: white;
+margin-top: 5px;
+margin-left: -30%; 
+margin-right: 30%;
+border-width: initial;
+border-style: none;
+border-color: initial;
+border-image: initial;
+outline: none;
+border-radius: 10px;
+}
+.profile2 .pro1 .loc img {
+width: 30px;
+height: 30px;
+}
+}
+/*..............................*/
+@media only screen and (max-width:2600px) and (min-width:500px){
+  .profile2 .pro1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow:auto;
+    justify-content: center;
+  }
+  .profile2 .pro1 .pro2 {
+    display: flex;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: auto;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 10px;
+   }
+   .profile2 .pro1 .pro2 img{
+    width: 30px;
+    height: 30px;
+   }
+   .profile2 .pro1 .pro3 {
+    border: none;
+    outline: none;
+    width: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 50%;
+    border-radius: 10px;
+   }
+   .profile2 .pro1 .pro3 img{
+    width: 30px;
+    height: 30px;
+   }
+ 
+}
+
+/*..........................................*/
+@media only screen and (max-width:528px) and (min-width:400px){
+  .profile2 .pro1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow:auto;
+    justify-content: center;
+  }
+  .profile2 .pro1 .pro2 {
+    display: flex;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: auto;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 10px;
+   }
+   .profile2 .pro1 .pro2 img{
+    width: 30px;
+    height: 30px;
+   }
+   .profile2 .pro1 .pro3 {
+    border: none;
+    outline: none;
+    width: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 35%;
+    border-radius: 10px;
+   }
+   .profile2 .pro1 .pro3 img{
+    width: 30px;
+    height: 30px;
+   }
+   .profile2 .pro1 .like {
+    display: flex;
+    border: none;
+    outline: auto;
+    width: 100px;
+    height: 35px;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.profile2 .pro1 .like img {
+  margin-top: 5px;
+  width: 25px;
+  height: 25px;
+}
+.profile2 .pro1 .loc {
+  display: flex;
+  width: 400px;
+  height: auto;
+  justify-content: center;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: -30%;
+  margin-right: 43%;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  outline: none;
+  border-radius: 10px;
+}
+.profile2 .pro1 .loc img {
+  width: 30px;
+  height: 30px;
+}
+}
+/*..............................................*/
+/* @media only screen and (max-width:668px) and (min-width:500px){
+  .profile2 .pro1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow:auto;
+    justify-content: center;
+  }
+  .profile2 .pro1 .pro2 {
+    display: flex;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: auto;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 10px;
+   }
+   .profile2 .pro1 .pro2 img{
+    width: 30px;
+    height: 30px;
+   }
+   .profile2 .pro1 .pro3 {
+    border: none;
+    outline: none;
+    width: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 50%;
+    border-radius: 10px;
+   }
+   .profile2 .pro1 .pro3 img{
+    width: 30px;
+    height: 30px;
+   }
+} */
