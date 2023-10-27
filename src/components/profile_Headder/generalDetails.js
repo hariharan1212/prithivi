@@ -1,8 +1,31 @@
 import React,{useState} from 'react'
 import  {Button,Modal,Form,Dropdown,SplitButton,InputGroup}  from 'react-bootstrap'
+// import { Dropdown } from 'react-bootstrap/Dropdown';
+import { Country,State,City} from 'country-state-city';
+import Select from 'react-select';
 
 export default function GeneralDetails() {
     const [show1,setShow1]=useState(false);
+
+    const countries = Country.getAllCountries().map((country) => ({
+        label: country.name,
+        value: country.id,
+        ...country
+      }));
+
+      const state = State.getAllStates().map((state) => ({
+        label: state.name,
+        value: state.id,
+        ...state
+      }));  
+
+      const city = City.getAllCities().map((city) => ({
+        label: city.name,
+        value: city.id,
+        ...city
+      }));
+
+
   return (
     <>
      <p style={{fontSize:"13px"}}>General Details <Button variant="outline-info" onClick={()=>setShow1(true)}>+</Button></p>
@@ -20,26 +43,32 @@ export default function GeneralDetails() {
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group className='mb-2'>
+                            <Form.Label>Nationality</Form.Label>
+                            <Select
+                                 id="country"
+                                 name="country"
+                                 label="country"
+                                 options={countries}
+                             />    
+                      </Form.Group>
+                        <Form.Group className='mb-2'>
                             <Form.Label>Birth Location</Form.Label>
-                            <Form.Control
-                            type='text'
-                            placeholder='Birth Location'
-                            ></Form.Control>
+                            <Select
+                                 id="state"
+                                 name="state"
+                                 label="state"
+                                 options={state}
+                             /> 
                         </Form.Group>
                         <Form.Group className='mb-2'>
                             <Form.Label>Current Location</Form.Label>
-                            <Form.Control
-                            type='text'
-                            placeholder='Current Location'
-                            ></Form.Control>
+                            <Select
+                                 id="city"
+                                 name="city"
+                                 label="city"
+                                 options={city}
+                             /> 
                         </Form.Group>
-                  <Form.Group className='mb-2'>
-                            <Form.Label>Nationality</Form.Label>
-                            <Form.Control
-                            type='text'
-                            placeholder='Nationality'
-                            ></Form.Control>
-                </Form.Group>
                 <Form.Group className='mb-2'>
                 <Form.Label>Salery</Form.Label> <br/>
                 <InputGroup className="mb-3">

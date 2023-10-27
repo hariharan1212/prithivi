@@ -11,9 +11,7 @@
 {
     width: 50px;
     height: 150px;
-    /* margin-left: 10px; */
-    position: relative;
-    
+    position: relative;   
 }
 .profile_pic img
 {

@@ -67,7 +67,7 @@ export default function Home (){
             <p>201k</p>
             <div class="pro2"><img src="./images/Dot menu icon.png" alt=""/></div>
             <div class="loc"><img src="./images/Shooting_location_spot.png" alt=""/>
-    <p>Chennai</p></div>
+              <p>Chennai</p></div>
             <div class="post"><img src="./images/samantha.jpg" alt=""/>
                 <div class="loc"><p>Chennai</p></div><div class="like"><img src="./images/Like icon.png" alt=""/><p>Like</p></div>
                 <div class="like"><img src="./images/comment icon.png" alt=""/>
