@@ -3,6 +3,12 @@ import  {Button,Modal,Form}  from 'react-bootstrap'
 
 export default function BodyMeasurements() {
     const [show2,setShow2]=useState(false);
+
+    // const [value,setValue]=useState("")
+
+    //  const handle_change=(e)=>{
+    //    console.log(setValue(e.target.value));
+    //  }
   return (
     <>
      <p style={{fontSize:"13px"}}>Body Measurements<Button variant="outline-info" onClick={()=>setShow2(true)}>+</Button></p>
@@ -16,7 +22,7 @@ export default function BodyMeasurements() {
                     <Form>
                         <Form.Group className="mb-3">
                         <Form.Label>Height</Form.Label>
-                        <Form.Select as='textarea'>
+                        <Form.Select as='textarea'  >
                             <option>Enter Height</option>
                             <option value="1">1-2 feet</option>
                             <option value="2">2-3 feet</option>

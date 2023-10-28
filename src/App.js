@@ -43,6 +43,7 @@ export default function App() {
           <Link to={"/navigation"}><button><img src="./images/navigation.jpg" alt=''/></button></Link> 
           <Link to={"/profile"} ><button><img src="./images/userprofile.png" alt='' /></button></Link> 
       </div>
+
     </div>
     </>
   );

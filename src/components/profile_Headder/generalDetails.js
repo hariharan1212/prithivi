@@ -1,29 +1,40 @@
-import React,{useState} from 'react'
-import  {Button,Modal,Form,Dropdown,SplitButton,InputGroup}  from 'react-bootstrap'
-// import { Dropdown } from 'react-bootstrap/Dropdown';
+import React,{ useMemo, useState} from 'react'
+import  {Button,Modal,Form,InputGroup}  from 'react-bootstrap'
+// import { Dropdown } from 'react-bootstrap/Dropdown'    Dropdown,SplitButton ;
 import { Country,State,City} from 'country-state-city';
 import Select from 'react-select';
 
 export default function GeneralDetails() {
     const [show1,setShow1]=useState(false);
 
-    const countries = Country.getAllCountries().map((country) => ({
-        label: country.name,
-        value: country.id,
-        ...country
-      }));
+    const [value,setValue]=useState([])
+    // const [value1,setValue1]=useState([])
+    // const [value2,setValue2]=useState([])
 
-      const state = State.getAllStates().map((state) => ({
+    const calculation = useMemo(() => Country.getAllCountries(value), [value]);
+    const calculation1 = useMemo(() => State.getAllStates(value), [value]);
+    const calculation2 = useMemo(() => City.getAllCities(value), [value]);
+
+
+
+    const countries = calculation.map((country) => ({
+      label: country.name,
+      value: country.id,
+      ...country
+    }))
+
+      const state =  calculation1.map((state) => ({
         label: state.name,
         value: state.id,
         ...state
-      }));  
+      }))
 
-      const city = City.getAllCities().map((city) => ({
+
+      const city = calculation2.map((city) => ({
         label: city.name,
         value: city.id,
         ...city
-      }));
+      })) 
 
 
   return (
@@ -49,6 +60,7 @@ export default function GeneralDetails() {
                                  name="country"
                                  label="country"
                                  options={countries}
+                                 value={value}
                              />    
                       </Form.Group>
                         <Form.Group className='mb-2'>
@@ -58,21 +70,23 @@ export default function GeneralDetails() {
                                  name="state"
                                  label="state"
                                  options={state}
+                                 value={value}
                              /> 
                         </Form.Group>
                         <Form.Group className='mb-2'>
-                            <Form.Label>Current Location</Form.Label>
+                            <Form.Label>Lives</Form.Label>
                             <Select
                                  id="city"
                                  name="city"
                                  label="city"
-                                 options={city}
+                                options={city}
+                                value={value}
                              /> 
                         </Form.Group>
                 <Form.Group className='mb-2'>
                 <Form.Label>Salery</Form.Label> <br/>
                 <InputGroup className="mb-3">
-                              <SplitButton
+                              {/* <SplitButton
                                 variant="outline-secondary"
                                 title="select"
                                 id="segmented-button-dropdown-1"
@@ -80,7 +94,7 @@ export default function GeneralDetails() {
                                 <Dropdown.Item >Inr</Dropdown.Item>
                                 <Dropdown.Item >USD</Dropdown.Item>
                                 <Dropdown.Item >Euro</Dropdown.Item>
-                                </SplitButton>
+                                </SplitButton> */}
                             <Form.Control
                             type='number'
                             placeholder='Salery'

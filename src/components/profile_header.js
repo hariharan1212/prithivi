@@ -1,20 +1,32 @@
 import React from 'react'
-import  {Row,Col,Card}  from 'react-bootstrap'
+import  {Row,Col,Card, Button}  from 'react-bootstrap'
 import Profession from './profile_Headder/profession';
 import GeneralDetails from './profile_Headder/generalDetails';
 import BodyMeasurements from './profile_Headder/bodyMeasurements';
 import PersonalInfo from './profile_Headder/personalInfo';
 import EducationalInfo from './profile_Headder/educationalInfo';
+import { useState } from 'react';
+
 
 
 export default function ProfileHeader() { 
+
+    const inputimg = [
+       
+    ]
+
+    const [add,setAdd]=useState([])
+
+    const handle_click=()=>{
+
+    }
      
   return (
     <>
     <div >
         <Row>
         <div className='cover_pic'>
-            <img src='./images/cover_pic.jpeg' alt=''/>
+            <img src='./images/cover_pic.jpeg' alt='' />
         </div>
         </Row>
         {/* ......................................................................... */}
@@ -57,13 +69,19 @@ export default function ProfileHeader() {
         <Row>
             <h5>Projects :</h5>
             <div>
+                <Row>
+                    <Col >
                 <Card style={{ width: '50px' ,height:"50px" }}>
                     <Card.Img variant='top' src='./images/thalaivar_profile.jpeg'/>
                     <p>text</p>
                 </Card>
+                    </Col>
+                    <Col style={{margin:"20px 10px 10px -150px"}}>
+                       <Button>+</Button>
+                    </Col>
+                </Row>
             </div>
         </Row>
-         
       {/* ....................... */}
     </div>
    
