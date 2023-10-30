@@ -1,6 +1,7 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 
@@ -27,10 +28,11 @@
   width: 120px;
   margin: 3px 0 0 10px;
 }
-.appPage_nav  button{
- padding: 6px;
+.appPage_nav span button{
  margin-top: 5px;
  border-radius: 50%;
+ height: 30px;
+ width: 30px;
  border: none;
  cursor: pointer;
 }
@@ -54,29 +56,29 @@
 
 /* ---------------------------------------------------------------------------------------*/
 
-.appIcons{
+/* .appIcons{
   width: 99%;
   height: 10%;
   display: flex;
- justify-content: space-evenly;
+ justify-content: space-evenly; 
  border-top: 2px solid blue;
  border-radius: 5px;
-}
-.appIcons button{
+} */
+/* .appIcons button{
   border: none;
   outline: none;
   background-color: white;
   width: 50px;
-}
-.appIcons img{
+} */
+/* .appIcons img{
   width: 35px;
   background-color: white;
   padding: 2px 2px;
   margin-top: 5px;
   border-radius: 10px;
- }
+ } */
 
-.appIcons button:focus{
+/* .appIcons button:focus{
   border-left: 1px solid grey;
   border-right: 1px solid grey;
   border-bottom: 2px solid blue;
@@ -85,13 +87,153 @@
   border-radius: 5px;
   transition-timing-function: ease-in-out;
   transform: 0.30s;
+} */
+
+/* ------------------------- navbar styles ------------------------ */
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"); */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} */
+:root {
+  --clr: #222327;
 }
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--clr);
+} */
+.navigation {
+  position: relative;
+  width: 99%;
+  height: 10%;
+  background-color: #222327;
+  display: flex;
+  /* justify-content: center;
+  align-items: center;
+  border-radius: 10px; */
+}
+.navigation img{
+  width: 35px;
+  /* background-color: white; */
+  padding: 2px 2px; 
+  border-radius: 10px;
+  margin-bottom: 20px;
+ }
+.navigation ul {
+  display: flex;
+  width: 350px;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 70px;
+  z-index: 1;
+  margin-left: -30px;
+}
+.navigation ul li  {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigation ul li .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--clr);
+}
+.navigation ul li .active .icon {
+  transform: translateY(-30px);
+}
+
+/* .navigation ul li {
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateX(20px);
+} */
+
+.navigation ul li.active {
+  opacity: 1;
+  transform: translateY(-15px);
+  transition: 0.5s;
+}
+
+.indicator {
+  position: absolute;
+  top: -25%;
+  width: 50px;
+  height: 50px;
+  background: whitesmoke;
+  border-radius: 50%;
+  border: 2px solid var(--clr);
+  transition: 0.5s;
+  margin-left: -12px;
+}
+/* .indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -10px 0 0 var(--clr);
+}
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 0 var(--clr);
+} */
+
+/* Indicator Transitions */
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(60% * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(114%  * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(114%  * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(114% * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(114%  * 4));
+}
+
 }
 
 /* ---------------------------------------------------------------------------------------*/
 
 
-@media only screen and (max-width:2600px) and (min-width:769px) {
+/* @media only screen and (max-width:2600px) and (min-width:769px) {
  
   .appContainer{
     width: 80%;
@@ -101,11 +243,11 @@
     overflow: hidden;
     margin-left: 10%;
     margin-right: 10%;
-  }
+  } */
 
  /* ---------------------------------------------------------------------------------------*/
 
-  .appPage{
+  /* .appPage{
     width: 100%;
     height: 90%;
     
@@ -142,11 +284,11 @@
     width: auto;
     height: 92%;
     overflow: auto;
-  } 
+  }  */
 
  /* ---------------------------------------------------------------------------------------*/
   
-  .appIcons{
+  /* .appIcons{
     width: 99%;
     height: 10%;
     display: flex;
@@ -179,4 +321,4 @@
     transition-timing-function: ease-in-out;
     transform: 0.30s;
   }
-}
+} */
