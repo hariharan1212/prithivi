@@ -11,14 +11,18 @@ import { useState } from 'react';
 
 export default function ProfileHeader() { 
 
-    const inputimg = [
-       
-    ]
+   const Image = (
+                <Card style={{ width: '70px' ,height:"50px" }}>
+                <Card.Img variant='top' src='./images/thalaivar_profile.jpeg'/>
+                <p style={{fontSize:"9px"}}>Anbula Rajinikanth</p>
+                </Card>
+   )
 
-    const [add,setAdd]=useState([])
-
-    const handle_click=()=>{
-
+   const [img,setImg]=useState([Image])
+   
+    const handle_Click=()=>{
+        console.log("clicked");
+        setImg(Image)
     }
      
   return (
@@ -71,14 +75,14 @@ export default function ProfileHeader() {
             <div>
                 <Row>
                     <Col >
-                <Card style={{ width: '50px' ,height:"50px" }}>
-                    <Card.Img variant='top' src='./images/thalaivar_profile.jpeg'/>
-                    <p>text</p>
-                </Card>
-                    </Col>
-                    <Col style={{margin:"20px 10px 10px -150px"}}>
-                       <Button>+</Button>
-                    </Col>
+                          {img}
+                   </Col>
+                   <Col>
+                        {img}
+                   </Col>
+                   <Col style={{margin:"20px 0px 10px -20px"}} >
+                 <Button onClick={handle_Click}>+</Button>
+                 </Col>
                 </Row>
             </div>
         </Row>

@@ -20,10 +20,10 @@ export default function Home (){
             <div className='propro'>
         <Link to={"/profile"}><button className='pro'><img src="./images/userprofile.png" alt=''/></button></Link> 
         <input type="text" className='input' placeholder={"What's on your mind?"}/>
-        <button className='pics'><img src="./images/photos-icon.png" alt=''/><p>Gallery</p></button>
+        <button className='pics'><img src="./images/photos_icon.png" alt=''/><p>Gallery</p></button>
         </div>
         <div className='pppp'>
-            <button className='wrap'><img src="./images/createstory icon.png" alt=''/><p>New</p></button>
+            <button className='wrap'><img src="./images/createstory_icon.png" alt=''/><p>New</p></button>
             <button className='wrap1'><img src="./images/Live video icon.png" alt=''/><p>Live</p></button>
             <button className='wrap2'><img src="./images/promote icon.png" alt=''/><p>Promote</p></button>
             <button className='wrap3'><img src="./images/link icon.png" alt=''/><p>Link</p></button>

@@ -1,5 +1,5 @@
-import React,{ useMemo, useState} from 'react'
-import  {Button,Modal,Form,InputGroup}  from 'react-bootstrap'
+import React,{ useEffect, useMemo, useState} from 'react'
+import  {Button,Modal,Form,InputGroup,Dropdown,SplitButton}  from 'react-bootstrap'
 // import { Dropdown } from 'react-bootstrap/Dropdown'    Dropdown,SplitButton ;
 import { Country,State,City} from 'country-state-city';
 import Select from 'react-select';
@@ -11,31 +11,48 @@ export default function GeneralDetails() {
     // const [value1,setValue1]=useState([])
     // const [value2,setValue2]=useState([])
 
-    const calculation = useMemo(() => Country.getAllCountries(value), [value]);
-    const calculation1 = useMemo(() => State.getAllStates(value), [value]);
-    const calculation2 = useMemo(() => City.getAllCities(value), [value]);
+     
+    
 
+    const  country_Api=  Country.getAllCountries();
+    const state_Api =  State.getAllStates();
+    const city_Api = City.getAllCities();
 
+// const Countries =()=>{
+//   useEffect( ()=>{
+//       const countries = Country.getAllCountries().map((country) => ({
+//         label: country.name,
+//         value: country.id,
+//         ...country
+//       }))
+//       console.log(countries);
+//     },[])
+// } 
 
-    const countries = calculation.map((country) => ({
-      label: country.name,
-      value: country.id,
-      ...country
-    }))
-
-      const state =  calculation1.map((state) => ({
-        label: state.name,
-        value: state.id,
-        ...state
+ 
+      const countries =  country_Api.map((country) => ({
+        label: country.name,
+        value: country.id,
+        ...country
       }))
 
+     
 
-      const city = calculation2.map((city) => ({
-        label: city.name,
-        value: city.id,
-        ...city
-      })) 
-
+        const state = state_Api.map( (state) => ({
+          label: state.name,
+          value: state.id,
+          ...state
+        }))
+     
+  
+        
+        const city = city_Api.map((city) => ({
+          label: city.name,
+          value: city.id,
+          ...city
+        })) 
+       
+       
 
   return (
     <>
@@ -54,13 +71,13 @@ export default function GeneralDetails() {
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group className='mb-2'>
-                            <Form.Label>Nationality</Form.Label>
+                            <Form.Label>Country</Form.Label>
                             <Select
                                  id="country"
                                  name="country"
                                  label="country"
                                  options={countries}
-                                 value={value}
+                                
                              />    
                       </Form.Group>
                         <Form.Group className='mb-2'>
@@ -70,7 +87,7 @@ export default function GeneralDetails() {
                                  name="state"
                                  label="state"
                                  options={state}
-                                 value={value}
+                               
                              /> 
                         </Form.Group>
                         <Form.Group className='mb-2'>
@@ -80,13 +97,17 @@ export default function GeneralDetails() {
                                  name="city"
                                  label="city"
                                 options={city}
-                                value={value}
+                              
                              /> 
                         </Form.Group>
                 <Form.Group className='mb-2'>
                 <Form.Label>Salery</Form.Label> <br/>
                 <InputGroup className="mb-3">
-                              {/* <SplitButton
+                            <Form.Control
+                            type='number'
+                            placeholder='Salery'
+                            ></Form.Control>
+                            {/* <SplitButton
                                 variant="outline-secondary"
                                 title="select"
                                 id="segmented-button-dropdown-1"
@@ -94,11 +115,7 @@ export default function GeneralDetails() {
                                 <Dropdown.Item >Inr</Dropdown.Item>
                                 <Dropdown.Item >USD</Dropdown.Item>
                                 <Dropdown.Item >Euro</Dropdown.Item>
-                                </SplitButton> */}
-                            <Form.Control
-                            type='number'
-                            placeholder='Salery'
-                            ></Form.Control>
+                                </SplitButton>  */}
                             </InputGroup>
                 </Form.Group>
                 <Form.Group className='mb-2'>
@@ -132,7 +149,8 @@ export default function GeneralDetails() {
                     <Button variant="primary" onClick={()=>setShow1(false)}>
                         Save Changes
                     </Button>
-                </Modal.Footer>
+                </Modal.Footer> 
+
              </Modal>
     </>
   )
