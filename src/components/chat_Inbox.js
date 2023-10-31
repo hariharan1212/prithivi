@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import "../stylesheets/chat.css"
 
-export default function Chat (){
+export default function ChatInbox (){
 
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');

@@ -12,7 +12,7 @@ export default function Home (){
     return(
         <>
         <div className='route'>
-        <Routes>
+         <Routes>
         <Route path="/profile" element={<Profile/>} />
         </Routes>
         </div>

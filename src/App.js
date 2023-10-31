@@ -5,16 +5,17 @@ import "./stylesheets/profile_headder.css";
 import {GrNotification} from "react-icons/gr";
 import {Routes,Route,Link} from  "react-router-dom"
 import Home from './components/home';
-import Chat from './components/chat';
+import Chatprofile from './components/chatprofile';
 import Searchclint from './components/searchclint';
 import Navigation from './components/navigation';
 //import Profile from './components/profile';
 import AddIcon from './components/addicon';
 import ProfileHeader from './components/profile_header';
-import './stylesheets/navigation.css'
+import './stylesheets/navigation.css';
 
 
 export default function App() {
+
       const list = document.querySelectorAll(".list");
 
      function activeLink() {
@@ -36,7 +37,7 @@ export default function App() {
         <div className="appPage_route">
               <Routes>
                     <Route path="/"  element={<Home/>}/>
-                    <Route path="/chat" element={<Chat/>}/>
+                    <Route path="/chat" element={<Chatprofile/>}/>
                     <Route path="/searchclint" element={<Searchclint/>}/>
                     <Route path="/navigation" element={<Navigation/>}/>
                     <Route path="/profile" element={<ProfileHeader />} />
@@ -67,7 +68,7 @@ export default function App() {
                 </li>
                 <li className="list">
                         <span className="icon">
-                        <Link to={"/navigation"}><img src="./images/navigation.jpg" alt=''/></Link> 
+                        <Link to={"/navigation"}><img src="./images/navigation.png" alt=''/></Link> 
                         </span>
                         {/* <span className="text">navigation</span> */}
                 </li>
@@ -86,8 +87,8 @@ export default function App() {
           <Link to={"/searchclint"}><button><img src="./images/personSearch.png" alt=''/></button></Link> 
           <Link to={"/navigation"}><button><img src="./images/navigation.jpg" alt=''/></button></Link> 
           <Link to={"/profile"} ><button><img src="./images/userprofile.png" alt='' /></button></Link>  */}
-          <div className="appIcons">
-          </div>
+          {/* <div className="appIcons">
+          </div> */}
      </div>
     </>
   );

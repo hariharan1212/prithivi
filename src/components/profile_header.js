@@ -27,7 +27,7 @@ export default function ProfileHeader() {
      
   return (
     <>
-    <div >
+    <div className='container'>
         <Row>
         <div className='cover_pic'>
             <img src='./images/cover_pic.jpeg' alt='' />
@@ -41,7 +41,7 @@ export default function ProfileHeader() {
             <img src='./images/thalaivar_profile.jpeg' alt=''/>
         </div>
         </Row>
-        <Row style={{margin:"-20px 0 0 10px", boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
+        <Row style={{margin:"-20px 0 0 10px"}}>
             <Profession/>
         </Row>
         <Row style={{margin:"20px 0 15px 10px",boxShadow: '1px 1px 5px gray',borderRadius:"10px"}}>
@@ -74,15 +74,15 @@ export default function ProfileHeader() {
             <h5>Projects :</h5>
             <div>
                 <Row>
-                    <Col >
+                <Col style={{margin:"35px 0 0 0"}} xs={3} >
+                 <Button onClick={handle_Click}>+</Button>
+                   </Col>
+                    <Col xs={4}>
                           {img}
                    </Col>
-                   <Col>
+                   <Col xs={4}>
                         {img}
                    </Col>
-                   <Col style={{margin:"20px 0px 10px -20px"}} >
-                 <Button onClick={handle_Click}>+</Button>
-                 </Col>
                 </Row>
             </div>
         </Row>

@@ -112,7 +112,7 @@
   position: relative;
   width: 99%;
   height: 10%;
-  background-color: #222327;
+  background-color: lightseagreen;
   display: flex;
   /* justify-content: center;
   align-items: center;
@@ -180,35 +180,35 @@
 .indicator {
   position: absolute;
   top: -25%;
-  width: 50px;
-  height: 50px;
-  background: whitesmoke;
+  width: 55px;
+  height: 55px;
+  background: lightsteelblue;
   border-radius: 50%;
-  border: 2px solid var(--clr);
+  border: 3px solid white;
   transition: 0.5s;
   margin-left: -12px;
 }
 /* .indicator::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: -22px;
+  top: 30%;
+  left: -20px;
   width: 20px;
   height: 20px;
   background: transparent;
-  border-top-right-radius: 20px;
-  box-shadow: 1px -10px 0 0 var(--clr);
+  border-top-right-radius: 15px;
+  box-shadow: 1px -10px 0 0 white;
 }
 .indicator::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: -22px;
+  top: 30%;
+  right: -20px;
   width: 20px;
   height: 20px;
   background: transparent;
-  border-top-left-radius: 20px;
-  box-shadow: -1px -10px 0 0 var(--clr);
+  border-top-left-radius: 15px;
+  box-shadow: -1px -10px 0 0 white;
 } */
 
 /* Indicator Transitions */
@@ -216,16 +216,16 @@
   transform: translateX(calc(60% * 0));
 }
 .navigation ul li:nth-child(2).active ~ .indicator {
-  transform: translateX(calc(114%  * 1));
+  transform: translateX(calc(100%  * 1));
 }
 .navigation ul li:nth-child(3).active ~ .indicator {
-  transform: translateX(calc(114%  * 2));
+  transform: translateX(calc(103%  * 2));
 }
 .navigation ul li:nth-child(4).active ~ .indicator {
-  transform: translateX(calc(114% * 3));
+  transform: translateX(calc(103% * 3));
 }
 .navigation ul li:nth-child(5).active ~ .indicator {
-  transform: translateX(calc(114%  * 4));
+  transform: translateX(calc(103%  * 4));
 }
 
 }
